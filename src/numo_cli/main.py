@@ -22,7 +22,7 @@ class NumoCLI:
 
     async def interactive_mode(self) -> None:
         """Run in interactive mode."""
-        print("Numo Interactive Shell (Press Ctrl+C to exit)")
+        print("Numo CLI Interactive Shell (Press Ctrl+C to exit)")
         print("Examples:")
         print(" 2 + 2")
         print(" 1 km to m")
@@ -49,17 +49,31 @@ class NumoCLI:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Numo CLI - A powerful calculator, converter, and translator")
-    parser.add_argument("expressions", nargs="*", help="Expressions to evaluate")
+    """Main entry point for the CLI."""
+    parser = argparse.ArgumentParser(
+        description="Numo CLI - A powerful calculator, converter, and translator"
+    )
+    parser.add_argument(
+        "expressions",
+        nargs="*",
+        help="Expressions to evaluate (e.g. '2 + 2', '1 km to m', 'hello in spanish')",
+    )
     args = parser.parse_args()
 
     cli = NumoCLI()
-    
-    if args.expressions:
-        asyncio.run(cli.process_expressions(args.expressions))
-    else:
-        asyncio.run(cli.interactive_mode())
+
+    try:
+        if args.expressions:
+            asyncio.run(cli.process_expressions(args.expressions))
+        else:
+            asyncio.run(cli.interactive_mode())
+    except KeyboardInterrupt:
+        print("\nGoodbye!")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    exit(main())

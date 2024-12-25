@@ -4,7 +4,7 @@ import re
 
 
 def get_version():
-    init_path = os.path.join("src", "cli", "__init__.py")
+    init_path = os.path.join("src", "numo_cli", "__init__.py")
     with open(init_path, "r", encoding="utf-8") as f:
         version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]", f.read(), re.M)
         if version_match:
@@ -24,7 +24,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "numo=cli.main:main",
+            "numo-cli=numo_cli.main:main",
         ],
     },
     author="Furkan Cosgun",

@@ -18,36 +18,63 @@ You can install Numo CLI using pip:
 pip install numo-cli
 ```
 
-## Usage
-
-### Interactive Mode
-
-Simply run `numo` to start the interactive shell:
-
+After installation, you might need to add Python's user scripts directory to your PATH. For macOS/Linux, add this line to your `~/.zshrc` or `~/.bashrc`:
 ```bash
-numo
+export PATH="$HOME/Library/Python/3.9/bin:$PATH"  # Adjust Python version as needed
 ```
 
-Example commands in interactive mode:
+Then reload your shell:
+```bash
+source ~/.zshrc  # or source ~/.bashrc
+```
+
+## Usage
+
+You can use Numo CLI in two ways:
+
+### 1. Direct Command (Recommended)
+
+Run in interactive mode:
+```bash
+numo-cli
+```
+
+Or with direct calculations:
+```bash
+numo-cli "2 + 2"
+numo-cli "1 km to m"
+numo-cli "hello in spanish"
+```
+
+### 2. Python Module
+
+If the direct command doesn't work, you can always use the Python module syntax:
+```bash
+python -m numo_cli
+```
+
+Or with arguments:
+```bash
+python -m numo_cli "2 + 2"
+python -m numo_cli "1 km to m"
+python -m numo_cli "hello in spanish"
+```
+
+### Example Commands
+
+Here are some examples of what you can do in either mode:
 ```
 >>> 2 + 2
 4
+
 >>> 1 km to m
 1000 m
+
 >>> hello in spanish
 hola
+
 >>> 100 usd to eur
 91.85 EUR
-```
-
-### Command Line Arguments
-
-You can also use Numo CLI directly from the command line:
-
-```bash
-numo "2 + 2"
-numo "1 km to m"
-numo "hello in spanish"
 ```
 
 ## Requirements
