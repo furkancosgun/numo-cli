@@ -18,7 +18,7 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
-        "numo>=0.2.2",
+        "numo>=0.2.4",
     ],
     entry_points={
         "console_scripts": [
