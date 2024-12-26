@@ -2,11 +2,16 @@ from typing import List, Optional
 import asyncio
 import argparse
 from numo import Numo
+import os
 
 
 class NumoCLI:
     def __init__(self):
         self.numo = Numo()
+
+    def clear_screen(self):
+        """Clear the terminal screen."""
+        os.system("cls" if os.name == "nt" else "clear")
 
     async def process_expression(self, expression: str) -> Optional[str]:
         """Process a single expression."""
@@ -30,12 +35,17 @@ class NumoCLI:
         print(" 100 usd to eur")
         print(" list functions - Show available functions")
         print(" list variables - Show available variables")
+        print(" clear - Clear the screen")
         print("-" * 40)
 
         while True:
             try:
                 expression = input(">>> ")
                 if not expression:
+                    continue
+
+                if expression.strip().lower() == "clear":
+                    self.clear_screen()
                     continue
 
                 if expression.strip().lower() == "list functions":
