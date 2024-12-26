@@ -28,12 +28,30 @@ class NumoCLI:
         print(" 1 km to m")
         print(" hello in spanish")
         print(" 100 usd to eur")
+        print(" list functions - Show available functions")
+        print(" list variables - Show available variables")
         print("-" * 40)
 
         while True:
             try:
                 expression = input(">>> ")
                 if not expression:
+                    continue
+
+                if expression.strip().lower() == "list functions":
+                    functions = self.numo.get_available_functions()
+                    print("\nAvailable Functions:")
+                    print("-" * 20)
+                    for func in functions:
+                        print(f"- {func}")
+                    continue
+
+                if expression.strip().lower() == "list variables":
+                    variables = self.numo.get_available_variables()
+                    print("\nAvailable Variables:")
+                    print("-" * 20)
+                    for var in variables:
+                        print(f"- {var}")
                     continue
 
                 result = await self.process_expression(expression)

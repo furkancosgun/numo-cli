@@ -1,125 +1,155 @@
-# Numo CLI
+# 🚀 Numo CLI
 
-A powerful command-line interface for calculations, unit conversions, and translations.
+> Your Swiss Army Knife for Calculations, Conversions, and Translations in the Terminal!
 
-## Features
 
-- Simple arithmetic calculations
-- Unit conversions (length, mass, currency, etc.)
-- Text translations
-- Interactive shell mode
-- Batch processing of multiple expressions
+[![PyPI version](https://badge.fury.io/py/numo.svg)](https://badge.fury.io/py/numo-cli)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 
-## Installation
 
-You can install Numo CLI using pip:
+Numo CLI transforms your terminal into a powerful computational assistant. Whether you need to crunch numbers, convert units, or translate text, Numo CLI has got you covered - all without leaving your command line!
+
+## ✨ Features
+
+🧮 **Smart Calculations**
+- Basic arithmetic operations
+- Complex mathematical expressions
+- Scientific calculations
+- Support for parentheses and operator precedence
+
+🔄 **Universal Converter**
+- Length (km, m, mi, ft, etc.)
+- Mass (kg, g, lb, oz, etc.)
+- Currency (Real-time rates for USD, EUR, GBP, etc.)
+- Temperature (°C, °F, K)
+- And many more!
+
+🌍 **Instant Translations**
+- Support for multiple languages
+- Natural language processing
+- Instant results
+
+⚡ **Powerful CLI**
+- Interactive shell with command history
+- Batch processing for multiple calculations
+- Function and variable listing
+- User-friendly error messages
+
+## 🚀 Quick Start
+
+### Installation
 
 ```bash
 pip install numo-cli
 ```
 
-After installation, you might need to add Python's user scripts directory to your PATH. For macOS/Linux, add this line to your `~/.zshrc` or `~/.bashrc`:
+For macOS/Linux users, add Python's bin directory to your PATH:
 ```bash
-export PATH="$HOME/Library/Python/3.9/bin:$PATH"  # Adjust Python version as needed
+echo 'export PATH="$HOME/Library/Python/3.9/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
 ```
 
-Then reload your shell:
-```bash
-source ~/.zshrc  # or source ~/.bashrc
-```
+### Interactive Mode
 
-## Usage
-
-You can use Numo CLI in two ways:
-
-### 1. Direct Command (Recommended)
-
-Run in interactive mode:
+Launch the interactive shell:
 ```bash
 numo-cli
 ```
 
-Or with direct calculations:
+### Direct Commands
+
 ```bash
-numo-cli "2 + 2"
-numo-cli "1 km to m"
-numo-cli "hello in spanish"
+# Mathematical Operations
+numo-cli "2 * (3 + 4)"          # Output: 14
+numo-cli "sqrt(16)"             # Output: 4
+
+# Unit Conversions
+numo-cli "5.5 km to miles"      # Output: 3.42 miles
+numo-cli "100 usd to eur"       # Output: 91.85 EUR
+numo-cli "30 celsius to f"      # Output: 86°F
+
+# Translations
+numo-cli "hello world in spanish"  # Output: hola mundo
+numo-cli "good morning in japanese" # Output: おはようございます
 ```
 
-### 2. Python Module
+## 🎯 Advanced Usage
 
-If the direct command doesn't work, you can always use the Python module syntax:
+### Available Commands
+
+In interactive mode, try these special commands:
+
 ```bash
-python -m numo_cli
+# List all available functions
+>>> list functions
+
+# List all available variables
+>>> list variables
+
+# Complex calculations
+>>> sin(45) + cos(30)
+>>> log(1000) / ln(10)
+
+# Chained conversions
+>>> 100 km/h to m/s
+>>> 1 btc to usd to eur
 ```
 
-Or with arguments:
+### Batch Processing
+
+Process multiple expressions at once:
 ```bash
-python -m numo_cli "2 + 2"
-python -m numo_cli "1 km to m"
-python -m numo_cli "hello in spanish"
+numo-cli "1 + 1" "2 * 2" "3 ^ 2"
 ```
 
-### Example Commands
+## 🛠️ Development Setup
 
-Here are some examples of what you can do in either mode:
-```
->>> 2 + 2
-4
-
->>> 1 km to m
-1000 m
-
->>> hello in spanish
-hola
-
->>> 100 usd to eur
-91.85 EUR
-```
-
-## Requirements
-
-- Python 3.7 or higher
-- `numo` package
-- `aiohttp`
-- `typing-extensions`
-
-## Development
-
-1. Clone the repository:
+1. Clone and setup:
 ```bash
 git clone https://github.com/furkancosgun/numo-cli.git
 cd numo-cli
 ```
 
-2. Create a virtual environment:
+2. Create virtual environment:
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 ```
 
 3. Install dependencies:
 ```bash
 pip install -r requirements.txt
-```
-
-4. Install in development mode:
-```bash
 pip install -e .
 ```
 
-## Contributing
+## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We love your input! Want to contribute? Here's how:
 
-## License
+1. Fork the repo
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 📝 License
 
-## Author
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-- Furkan Cosgun ([@furkancosgun](https://github.com/furkancosgun))
+## 👨‍💻 Author
 
-## Acknowledgments
+**Furkan Cosgun**
+- GitHub: [@furkancosgun](https://github.com/furkancosgun)
+- LinkedIn: [Furkan Cosgun](https://linkedin.com/in/furkancosgun)
 
-- Built with [Numo](https://github.com/furkancosgun/numo) library
+## 🙏 Acknowledgments
+
+- Built with ❤️ using [Numo](https://github.com/furkancosgun/numo) library
+- Special thanks to all contributors
+
+---
+
+<p align="center">
+Made with ❤️ by Furkan Cosgun
+</p>
