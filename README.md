@@ -141,7 +141,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Furkan Cosgun**
 - GitHub: [@furkancosgun](https://github.com/furkancosgun)
-- LinkedIn: [Furkan Cosgun](https://linkedin.com/in/furkancosgun)
+- LinkedIn: [Furkan Cosgun](https://linkedin.com/in/furkancsgn)
 
 ## 🙏 Acknowledgments
 
