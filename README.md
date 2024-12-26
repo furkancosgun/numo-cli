@@ -22,7 +22,6 @@ Numo CLI transforms your terminal into a powerful computational assistant. Wheth
 - Length (km, m, mi, ft, etc.)
 - Mass (kg, g, lb, oz, etc.)
 - Currency (Real-time rates for USD, EUR, GBP, etc.)
-- Temperature (°C, °F, K)
 - And many more!
 
 🌍 **Instant Translations**
@@ -93,7 +92,7 @@ In interactive mode, try these special commands:
 
 # Chained conversions
 >>> 100 km/h to m/s
->>> 1 btc to usd to eur
+>>> sum(1,2,3) usd to eur
 ```
 
 ### Batch Processing
